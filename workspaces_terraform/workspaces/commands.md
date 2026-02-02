@@ -1,4 +1,8 @@
 ```
+> az account show --query id -o tsv
+```
+
+```
 > terraform init
 
 # list workspaces
@@ -7,9 +11,11 @@
 # create workspaces. creates a new folder 'terraform.tfstate.d'
 > terraform workspace new dev|uat|prod
 
+# by default terraform will use terraform.tfvars if present.
 > terraform workspace select dev
 > terraform plan -var-file ./dev/dev.tfvars
 > terraform apply -ver-file ./dev/dev.tfvars -auto-approve
+> terraform output api_key
 
 > terrafrom destroy -ver-file ./dev/dev.tfvars -auto-approve # deletes the resource group "dev"
 
