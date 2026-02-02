@@ -24,3 +24,7 @@
 > terraform plan -var-file ./uat/uat.tfvars
 > terraform apply -ver-file ./uat/uat.tfvars -auto-approve
 ```
+
+```
+> terraform console -var-file ./prod/prod.tfvars
+```

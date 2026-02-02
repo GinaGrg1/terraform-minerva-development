@@ -1,4 +1,18 @@
+variable "application_name" {
+    type = string
+}
+
+variable "environment_name" {
+  type = string
+}
+
 variable "resource_group_name" {
+    type = string
+
+    validation {
+      condition = length(var.resource_group_name) <= 12
+      error_message = "Resouce Group Name must be less than or equal to 12 characters."
+    }
 }
 
 variable "resource_group_location" {
@@ -14,6 +28,11 @@ variable "api_key" {
 
 variable "instance_count" {
     type = number
+
+    validation {
+      condition = var.instance_count >= local.min_nodes && var.instance_count <= local.max_nodes && var.instance_count % 2 != 0
+      error_message = "Must be between 5 and 9 and never even."
+    }
 }
 
 variable "regions" {

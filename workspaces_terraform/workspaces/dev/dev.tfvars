@@ -1,3 +1,7 @@
+enabled = true
+instance_count = 7
+application_name = "PurpleTrain"
+environment_name = "dev"
 resource_group_name = "dev"
 resource_group_location = "centralus"
 subscription_id = "b21fc0f4-4793-428f-a61b-257b399c752e"
