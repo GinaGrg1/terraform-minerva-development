@@ -45,6 +45,7 @@ resource "azurerm_resource_group" "main" {
 module "resource_group" {
     source = "./Modules/resource_group"
 
-    resource_group_name = "rg-dev"
-    resource_group_location = "westus"
+    resource_group_name = var.resource_group_data["development_01"].name
+    resource_group_location = var.resource_group_data["development_01"].location
+    resource_group_data = var.resource_group_data
 }
