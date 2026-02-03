@@ -1,9 +1,21 @@
+variable "subscription_id" {
+}
+
 variable "application_name" {
     type = string
 }
 
 variable "environment_name" {
   type = string
+}
+
+variable "resource_group_data" {
+    type = map(object({
+        enabled = bool
+        name = string
+        location = string
+    }))
+    default = {}
 }
 
 variable "resource_group_name" {
@@ -16,9 +28,7 @@ variable "resource_group_name" {
 }
 
 variable "resource_group_location" {
-}
-
-variable "subscription_id" {
+    type = string
 }
 
 variable "api_key" {
