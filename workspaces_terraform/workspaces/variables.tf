@@ -71,3 +71,6 @@ variable "sku_settings" {
     })
   
 }
+
+variable "resource_group_output" {
+}

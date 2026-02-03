@@ -9,12 +9,12 @@ subscription_id = "b21fc0f4-4793-428f-a61b-257b399c752e"
 resource_group_data = {
     development_01 = {
         enabled = true
-        name = "rg01-dev"
+        name = "rg01-comp-dev"
         location = "westus"
     },
     development_02 = {
         enabled = true
-        name = "rg02-dev"
+        name = "rg02-comp-dev"
         location = "uksouth"
     }
 }

@@ -19,7 +19,6 @@ output "sku_setting_kind" {
     value = var.sku_settings.kind
 }
 
-output "random-module-value" {
-    value = module.module-random.random_string.result
-  
+output "resource_group_output" {
+  value = module.resource_group.resource_group_output
 }
