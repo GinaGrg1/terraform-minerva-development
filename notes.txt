@@ -1,28 +1,3 @@
-# In rg.tfvars file: 
-resource_group_data = {
-    development_centralus_rg_01 = {
-        enabled = true
-        name = "Gurung-Test"
-        location = "CentralUS"
-    }
-    development_centralus_rg_02 = {
-        enabled = true
-        name = "Gurung-Test-2"
-        location = "CentralUs"
-    }
-}
-
-# In variables.tf file you will have
-variable "resource_group_data" {
-    type = map(object({
-        #Required
-        enabled = bool
-        location = string
-        name = string
-
-        # Optional
-        managed_by = optional(string)
-        tags = optional(string)
-    }))
-    default = {}
-}
+-- Using environment variables. These MUST have these prefixes.
+* $env:ARM_SUBSCRIPTION_ID = "somevalue"
+* $env:TF_VAR_api_key = "noori"

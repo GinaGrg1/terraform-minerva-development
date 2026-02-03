@@ -1,6 +1,3 @@
-variable "subscription_id" {
-}
-
 variable "application_name" {
     type = string
 }
