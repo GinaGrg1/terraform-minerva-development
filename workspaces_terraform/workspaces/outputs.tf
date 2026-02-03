@@ -18,3 +18,8 @@ output "primary_region_instance" {
 output "sku_setting_kind" {
     value = var.sku_settings.kind
 }
+
+output "random-module-value" {
+    value = module.module-random.random_string.result
+  
+}

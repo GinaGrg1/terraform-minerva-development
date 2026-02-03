@@ -49,3 +49,8 @@ module "resource_group" {
     resource_group_location = var.resource_group_data["development_01"].location
     resource_group_data = var.resource_group_data
 }
+
+module "module-random" {
+  source  = "hashicorp/module/random"
+  version = "1.0.0"
+}
