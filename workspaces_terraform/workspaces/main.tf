@@ -3,11 +3,6 @@ locals {
   max_nodes = 9
 }
 
-resource "azurerm_resource_group" "main" {
-    name = var.resource_group_name
-    location = var.resource_group_location
-}
-
 # resource "random_string" "suffix" {
 #     length = 6
 #     upper = false
@@ -46,9 +41,19 @@ module "resource_group" {
     source = "./Modules/resource_group"
 
     resource_group_data = var.resource_group_data
+
+    resource_group_name = var.resource_group_name
+    resource_group_location = var.resource_group_location
 }
 
 module "module-random" {
   source  = "hashicorp/module/random"
   version = "1.0.0"
+}
+
+module "main_storage" {
+  source = "./Modules/storage_account"
+
+  resource_group_name = var.resource_group_name
+  resource_group_location = var.resource_group_location
 }
