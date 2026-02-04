@@ -27,4 +27,7 @@
 
 ```
 > terraform console -var-file ./prod/prod.tfvars
+
+# if using backend.conf file
+> terraform init --backend-config=backend.conf
 ```

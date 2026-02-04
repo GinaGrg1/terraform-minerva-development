@@ -9,6 +9,7 @@ terraform {
         version = "~> 3.8.1"
     }
   }
+  backend "azurerm" {}
 }
 
 # Configure the Microsoft Azure Provider
