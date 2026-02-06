@@ -9,7 +9,7 @@ resource_group_data = {
     development_01 = {
         enabled = true
         name = "rg01-comp-dev"
-        location = "westus"
+        location = "uksouth"
     },
     development_02 = {
         enabled = true

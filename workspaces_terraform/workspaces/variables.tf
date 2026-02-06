@@ -28,10 +28,10 @@ variable "resource_group_location" {
     type = string
 }
 
-variable "api_key" {
-    type = string
-    sensitive = true
-}
+# variable "api_key" {
+#     type = string
+#     sensitive = true
+# }
 
 variable "instance_count" {
     type = number
@@ -69,5 +69,5 @@ variable "sku_settings" {
   
 }
 
-variable "resource_group_output" {
-}
+# variable "resource_group_output" {
+# }
