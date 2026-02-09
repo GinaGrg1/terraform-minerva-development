@@ -71,3 +71,7 @@ variable "sku_settings" {
 
 # variable "resource_group_output" {
 # }
+
+variable "containers_list" {
+  type = list(string)
+}

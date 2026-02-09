@@ -30,10 +30,14 @@ module "main_storage" {
 }
 
 
-module "rgcontainer" {
-  source = "./Modules/storage_container"
+module "rgcontainers" {
+  count = length(var.containers_list)
 
-  storage_account_id = module.main_storage.st-id
+   source = "./Modules/storage_container"
+
+   container = var.containers_list[count.index]
+   storage_account_id = module.main_storage.st-id
+  
 }
 
 

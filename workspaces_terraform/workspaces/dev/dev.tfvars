@@ -1,3 +1,4 @@
+containers_list = ["tfstate", "config", "logs", "backups"]
 enabled = false
 instance_count = 7
 application_name = "PurpleTrain"
