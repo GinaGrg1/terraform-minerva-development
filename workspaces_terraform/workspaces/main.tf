@@ -41,10 +41,10 @@ module "rgcontainers" {
 }
 
 
-# module "az_log_analytics" {
-#     source = "./Modules/log_analytics"
+module "az_log_analytics" {
+    source = "./Modules/log_analytics"
 
-#     name = "log-something"
-#     location = module.main_rg.location
-#     resource_group_name = module.main_rg.name
-# }
+    name = "log-something"
+    location = module.main_rg.location
+    resource_group_name = module.main_rg.name
+}
