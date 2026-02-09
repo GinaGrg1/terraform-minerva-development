@@ -1,6 +1,7 @@
 containers_list = ["tfstate", "config", "logs", "backups"]
 enabled = false
 instance_count = 7
+la_name = "la-dev"
 application_name = "PurpleTrain"
 environment_name = "dev"
 resource_group_name = "rg-dev"

@@ -75,3 +75,7 @@ variable "sku_settings" {
 variable "containers_list" {
   type = list(string)
 }
+
+variable "la_name" {
+  type = string
+}

@@ -43,8 +43,8 @@ module "rgcontainers" {
 
 module "az_log_analytics" {
     source = "./Modules/log_analytics"
-
-    name = "log-something"
+    
+    la_name = var.la_name
     location = module.main_rg.location
     resource_group_name = module.main_rg.name
 }

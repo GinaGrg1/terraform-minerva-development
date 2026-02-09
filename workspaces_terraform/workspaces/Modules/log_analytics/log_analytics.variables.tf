@@ -1,4 +1,4 @@
-variable "name" {
+variable "la_name" {
   type = string
 }
 
