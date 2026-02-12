@@ -29,7 +29,6 @@ module "main_storage" {
   location = module.main_rg.location
 }
 
-
 module "rgcontainers" {
   count = length(var.containers_list)
 
@@ -40,7 +39,6 @@ module "rgcontainers" {
   
 }
 
-
 module "az_log_analytics" {
     source = "./Modules/log_analytics"
     
@@ -49,7 +47,6 @@ module "az_log_analytics" {
     resource_group_name = module.main_rg.name
 }
 
-
 module "corp_data_factory" {
   source = "./Modules/data_factory" 
   
@@ -57,4 +54,13 @@ module "corp_data_factory" {
   location = module.main_rg.location 
   resource_group_name = module.main_rg.name
   
+}
+
+module "kv-main" {
+  source = "./Modules/kay_vault"
+
+  application_name = var.application_name 
+  environment_name = var.environment_name 
+  location = module.main_rg.location 
+  resource_group_name = module.main_rg.name 
 }
