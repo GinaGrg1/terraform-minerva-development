@@ -1,4 +1,5 @@
 containers_list = ["tfstate", "config", "logs", "backups"]
+df_name = "df-dev"
 enabled = false
 instance_count = 7
 la_name = "la-dev"

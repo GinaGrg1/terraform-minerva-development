@@ -48,3 +48,13 @@ module "az_log_analytics" {
     location = module.main_rg.location
     resource_group_name = module.main_rg.name
 }
+
+
+module "corp_data_factory" {
+  source = "./Modules/data_factory" 
+  
+  df_name = var.df_name 
+  location = module.main_rg.location 
+  resource_group_name = module.main_rg.name
+  
+}
